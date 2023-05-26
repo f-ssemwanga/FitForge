@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/be5d79728a.js" crossorigin="anonymous"></script>
+    <title>FitForge</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <div id="logo"><img src="assets/NewLogo.PNG" alt="logo"></div>
+      <button id="login" class="login-btn">Login / Sign Up</button>
+    </header>
+    <main style="background-image: linear-gradient(to bottom, rgba(6,71,137), rgba(255, 255, 255,0)), url(assets/backgroundImage.PNG);">
+        <section id="section-one">
+        <p id="tagline">Forge Your Fitness Journey with Fitforge!</p>
+        <h1 id="question">Ready to Get Started?</h1>
+        <h2 id="paragraph">Begin your journey with Fitforge today and discover the power of personalised fitness. Sign up now and take the first step towards a healthier, fitter you.</h2>
+        
+         
+          <!-- Exercise box -->
+          <div id="exercise-container">
+            <div class="exercises">
+              <h2>Exercises</h2>
+              <div class ="search">
+                <input type ="text" class ="exerciseInput" placeholder ="search body targets" spellcheck="false">
+                
+                <button class ="exSearch"><i class="fas fa-search"></i> Search</button> 
+              </div>
+              <div class="error">
+                <p>Incorrect targets: try glutes, spine, traps..</p>
+              </div>
+            <div id ="exerciseData">
+              <p class="exNameLabel"> Name: <span class="exName"></span> </p>
+              <p class="exTargetLabel"> Target: <span class="exTarget"></span> </p>
+              <p class="exEquipLabel"> Equipment: <span class="exEquipment"></span> </p>
+              <p class="exLinkLabel"> <span class="exUrl"></span> </p>
+              </div>
+            </div> 
+            <!-- Nutrition box -->
+            <div class="diet">
+              <h2>Diet</h2>
+              <div class ="reSearch">
+                <input type ="text" class="recipeInput" placeholder ="search recipes" spellcheck="false">
+                <button class ="recipeSearch"><i class="fas fa-search"></i> Search</button>
+              </div>
+              <div class="nutritionError">
+                <p>Incorrect body targets: try chicken, beef..</p>
+              </div>
+              <div id ="nutritionContainer">
+                <p class="recipeLabel"> Name: <span class="recipeName"></span> </p>
+                <p class="cuisineLabel"> cuisineType: <span class="cuisineType"></span> </p>
+                <p class="caloriesLabel"> Calories: <span class="calories"></span> </p>
+                <p class="linkLabel">Web: <span class="recipeUrl"></span> </p>  
+              </div>
+            </div>
+            <div class="discover">
+               <!-- This is the main container -->
+              <div id="healthCalcContainer">
+                <!-- Heading of the card -->
+                <h2>Health Calculator</h2> 
+                <!-- spinner to get the age -->
+                <div class="age">
+                  <label class="ageLabel" for="ageSpinner">Age:</label>
+                  <input type="number" title="Set an age" id="ageSpinner" name="ageSpinner" min="16" max="80" step="1" value="16">
+                </div>
+                  <!-- Select input for the gender -->
+                <div class="gender">
+            <label class="genderLabel" for="gender">Gender:</label>
+            <select id="gender" name="gender" title="Select a gender">
+                <option value="male">M</option>
+                <option value="female">F</option>
+            </select>
+                </div>
+                <!-- Spinner for the height -->
+                <div class="height">
+          <label class="heightLabel" for="heightSpinner">Height(cm):</label>
+          <input type="number" title="Set the height" id="heightSpinner" name="heightSpinner" min="120" max="300" step="1" value="120">
+                </div>
+                <!-- Spinner for the weight -->
+                <div class="weight">
+          <label class="weightLabel" for="weightSpinner">Weight(kg):</label>
+          <input type="number" title="Set the weight" id="weightSpinner" name="weightSpinner" min="45" max="280" step="1" value="45">
+          <button class="calcButtons goBtn">Calculate</button>
+          <button class="calcButtons resetBtn">Clear</button>
+                </div>
+                <!-- Button to fetch and display data -->
+                <hr>   
+                <div id="bmi_data">
+          <h3 class="bmiLabel">BMI: </h3>
+         <!-- Div for holding the BMI data -->
+          <div class="bmiData"></div>
+                </div>
+                <div id="status_data">
+          <h3 class="statusLabel">Status: </h3>
+          <!-- Status div -->
+          <div class="statusData"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </main>
+        <footer>
+          <p>Follow Us</p>
+          <div class="social-menu social-media-icons">
+            <ul>
+                <li><a href="https://www.facebook.com" class="fa"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com" class="fa"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com" class="fa"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com" class="fa"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+      </footer>
+      <script src="assets/app.js"></script>
+</html>
